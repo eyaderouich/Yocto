@@ -2,8 +2,8 @@ Cette couche prend en charge l'intégration de l'application de détection et de
 
 Pour le bon fonctionnement de cette application, il est nécessaire d'ajouter d'autres couches pour inclure les bibliothèques nécessaires ainsi que d'autres technologies utiles :
 
-    - **meta**
-    - **meta-poky**
-    - **meta-openembedded**(meta-oe , meta-python, meta-networking)
-    - **meta-vehiclelib** qui contient des recettes spécifiques à l'apprentissage automatique (recipes-ml) essentielles pour l'intégration des bibliothèques telles que PyTorch, TorchVision et PyTesseract.
+    -**meta**
+    -**meta-poky**
+    -**meta-openembedded**(meta-oe , meta-python, meta-networking)
+    -**meta-vehiclelib** qui contient des recettes spécifiques à l'apprentissage automatique (recipes-ml) essentielles pour l'intégration des bibliothèques telles que PyTorch, TorchVision et PyTesseract.
 
