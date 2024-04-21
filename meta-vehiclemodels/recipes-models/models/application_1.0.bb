@@ -1,8 +1,6 @@
 SUMMARY = "L'intégration de modéle dans l'image yocto"
 LICENSE = "CLOSED"
 
-S = "${WORKDIR}"
-
 SRC_URI = "https://github.com/eyaderouich/pfe/raw/main/src/main.py;name=main \ 
           https://github.com/eyaderouich/pfe/raw/main/src/marque.json;name=json \
           https://github.com/eyaderouich/pfe/raw/main/src/config.py;name=config \
