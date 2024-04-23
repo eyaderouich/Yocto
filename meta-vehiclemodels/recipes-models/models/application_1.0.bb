@@ -8,12 +8,8 @@ SRC_URI = "https://github.com/eyaderouich/pfe/raw/main/src/main.py;name=main \
           https://github.com/eyaderouich/pfe/raw/main/src/classes.names;name=classes \
           https://github.com/eyaderouich/pfe/raw/main/src/coco.names;name=coco \
           https://github.com/eyaderouich/pfe/raw/main/src/darknet-yolov3.cfg;name=darknet \
-          https://github.com/eyaderouich/pfe/raw/main/Nationality.pth;name=nationality \
           https://github.com/eyaderouich/pfe/raw/main/src/yolov4.cfg;name=yolov4 \
-          https://github.com/eyaderouich/pfe/raw/main/src/broker.cfg;name=configbroker \
-          file://video1.mp4 \
-          file://demo.mp4 \
-          file://EspagneCam24.mp4"
+          https://github.com/eyaderouich/pfe/raw/main/src/broker.cfg;name=configbroker"
           
 SRC_URI[main.sha256sum] = "d26a4314a4aa6b3961a173fd81213794b75996f1cd55abecaa3e3a69836320cf"
 SRC_URI[json.sha256sum] = "a0df51b79b30173515ddd01f700121906d225eeb69d67e45119d3935c15e5e40"
@@ -23,7 +19,6 @@ SRC_URI[classes.sha256sum] = "327d67f372f345b3cc84d142a70a06173a1cd0cb0208a2a3bf
 SRC_URI[coco.sha256sum] = "33c77761e124cc74911346865e3bc1219b87c2db7d0f106e3376bf5ef3785933"
 SRC_URI[darknet.sha256sum] = "3466e673486fd9f4e1e54860a94c09fdeda9bc7240b3e9bb2391bc7d3df5c673"
 SRC_URI[yolov4.sha256sum] = "a6d0f8e5c62cc8378384f75a8159b95fa2964d4162e33351b00ac82e0fc46a34"
-SRC_URI[nationality.sha256sum] = "d176bd87536e02f8124da8e2b927306cc4d2e27cee7cd59f0cbb10e996d5d5dc"
 SRC_URI[configbroker.sha256sum] = "bdc47bacaf9bd7a412b41c1c0987075dee7296efcb21e8516832c78af95fc7d4"
 
 FILES:${PN} += "${datadir}/application/*"
@@ -31,18 +26,12 @@ FILES:${PN} += "${datadir}/application/*"
 do_install() {
     install -d ${D}${datadir}/application/ 
     install -m 0644 ${WORKDIR}/classes.names ${D}${datadir}/application/
+    install -m 0644 ${WORKDIR}/broker.cfg ${D}${datadir}/application/
     install -m 0644 ${WORKDIR}/coco.names ${D}${datadir}/application/
     install -m 0644 ${WORKDIR}/config.py ${D}${datadir}/application/
     install -m 0644 ${WORKDIR}/darknet-yolov3.cfg ${D}${datadir}/application/
     install -m 0644 ${WORKDIR}/main.py ${D}${datadir}/application/
-    install -m 0644 ${WORKDIR}/Nationality.pth ${D}${datadir}/application/
     install -m 0644 ${WORKDIR}/utils.py ${D}${datadir}/application/
     install -m 0644 ${WORKDIR}/yolov4.cfg ${D}${datadir}/application/
     install -m 0644 ${WORKDIR}/marque.json ${D}${datadir}/application/
-    install -m 0644 ${WORKDIR}/video1.mp4 ${D}${datadir}/application/
-    install -m 0644 ${WORKDIR}/demo.mp4 ${D}${datadir}/application/
-    install -m 0644 ${WORKDIR}/EspagneCam24.mp4 ${D}${datadir}/application/
 }
-
-
-
